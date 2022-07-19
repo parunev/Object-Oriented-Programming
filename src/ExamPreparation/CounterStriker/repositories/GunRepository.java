@@ -1,14 +1,14 @@
-package CounterStriker.repositories;
+package ExamPreparation.CounterStriker.repositories;
 
-import CounterStriker.common.DataValidator;
-import CounterStriker.models.guns.Gun;
+import ExamPreparation.CounterStriker.common.DataValidator;
+import ExamPreparation.CounterStriker.models.guns.Gun;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static CounterStriker.common.ExceptionMessages.INVALID_GUN_REPOSITORY;
+import static ExamPreparation.CounterStriker.common.ExceptionMessages.INVALID_GUN_REPOSITORY;
 
 public class GunRepository implements Repository<Gun> {
 

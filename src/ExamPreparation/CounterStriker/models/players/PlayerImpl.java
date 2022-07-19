@@ -1,10 +1,10 @@
-package CounterStriker.models.players;
+package ExamPreparation.CounterStriker.models.players;
 
-import CounterStriker.common.DataValidator;
-import CounterStriker.models.guns.Gun;
+import ExamPreparation.CounterStriker.common.DataValidator;
+import ExamPreparation.CounterStriker.models.guns.Gun;
 
-import static CounterStriker.common.ExceptionMessages.*;
-import static CounterStriker.common.OutputMessages.*;
+import static ExamPreparation.CounterStriker.common.ExceptionMessages.*;
+import static ExamPreparation.CounterStriker.common.OutputMessages.*;
 
 public abstract class PlayerImpl implements Player {
 

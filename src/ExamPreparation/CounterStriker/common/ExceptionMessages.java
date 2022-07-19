@@ -1,4 +1,4 @@
-package CounterStriker.common;
+package ExamPreparation.CounterStriker.common;
 
 public class ExceptionMessages {
 

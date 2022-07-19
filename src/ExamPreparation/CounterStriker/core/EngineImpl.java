@@ -1,6 +1,6 @@
-package CounterStriker.core;
+package ExamPreparation.CounterStriker.core;
 
-import CounterStriker.common.Command;
+import ExamPreparation.CounterStriker.common.Command;
 
 import java.io.BufferedReader;
 import java.io.IOException;

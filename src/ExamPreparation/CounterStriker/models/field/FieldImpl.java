@@ -1,12 +1,12 @@
-package CounterStriker.models.field;
+package ExamPreparation.CounterStriker.models.field;
 
-import CounterStriker.models.players.Player;
+import ExamPreparation.CounterStriker.models.players.Player;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static CounterStriker.common.OutputMessages.*;
+import static ExamPreparation.CounterStriker.common.OutputMessages.*;
 
 public class FieldImpl implements Field {
 

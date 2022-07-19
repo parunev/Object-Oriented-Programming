@@ -1,4 +1,4 @@
-package CounterStriker.core;
+package ExamPreparation.CounterStriker.core;
 
 public interface Controller {
     

@@ -1,22 +1,22 @@
-package CounterStriker.core;
+package ExamPreparation.CounterStriker.core;
 
-import CounterStriker.models.field.Field;
-import CounterStriker.models.field.FieldImpl;
-import CounterStriker.models.guns.Gun;
-import CounterStriker.models.guns.Pistol;
-import CounterStriker.models.guns.Rifle;
-import CounterStriker.models.players.CounterTerrorist;
-import CounterStriker.models.players.Player;
-import CounterStriker.models.players.Terrorist;
-import CounterStriker.repositories.GunRepository;
-import CounterStriker.repositories.PlayerRepository;
-import CounterStriker.repositories.Repository;
+import ExamPreparation.CounterStriker.models.field.Field;
+import ExamPreparation.CounterStriker.models.field.FieldImpl;
+import ExamPreparation.CounterStriker.models.guns.Gun;
+import ExamPreparation.CounterStriker.models.guns.Pistol;
+import ExamPreparation.CounterStriker.models.guns.Rifle;
+import ExamPreparation.CounterStriker.models.players.CounterTerrorist;
+import ExamPreparation.CounterStriker.models.players.Player;
+import ExamPreparation.CounterStriker.models.players.Terrorist;
+import ExamPreparation.CounterStriker.repositories.GunRepository;
+import ExamPreparation.CounterStriker.repositories.PlayerRepository;
+import ExamPreparation.CounterStriker.repositories.Repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static CounterStriker.common.ExceptionMessages.*;
-import static CounterStriker.common.OutputMessages.*;
+import static ExamPreparation.CounterStriker.common.ExceptionMessages.*;
+import static ExamPreparation.CounterStriker.common.OutputMessages.*;
 
 public class ControllerImpl implements Controller {
 

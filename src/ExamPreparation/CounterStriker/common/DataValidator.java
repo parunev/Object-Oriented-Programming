@@ -1,7 +1,7 @@
-package CounterStriker.common;
+package ExamPreparation.CounterStriker.common;
 
-import CounterStriker.models.guns.Gun;
-import CounterStriker.models.players.Player;
+import ExamPreparation.CounterStriker.models.guns.Gun;
+import ExamPreparation.CounterStriker.models.players.Player;
 
 public class DataValidator {
 

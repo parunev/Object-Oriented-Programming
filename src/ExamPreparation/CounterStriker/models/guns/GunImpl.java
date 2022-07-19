@@ -1,8 +1,8 @@
-package CounterStriker.models.guns;
+package ExamPreparation.CounterStriker.models.guns;
 
-import CounterStriker.common.DataValidator;
+import ExamPreparation.CounterStriker.common.DataValidator;
 
-import static CounterStriker.common.ExceptionMessages.*;
+import static ExamPreparation.CounterStriker.common.ExceptionMessages.*;
 
 public abstract class GunImpl implements Gun {
 

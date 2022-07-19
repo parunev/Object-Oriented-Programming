@@ -1,4 +1,4 @@
-package CounterStriker.repositories;
+package ExamPreparation.CounterStriker.repositories;
 
 import java.util.Collection;
 

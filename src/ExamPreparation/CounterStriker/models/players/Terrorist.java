@@ -1,6 +1,6 @@
-package CounterStriker.models.players;
+package ExamPreparation.CounterStriker.models.players;
 
-import CounterStriker.models.guns.Gun;
+import ExamPreparation.CounterStriker.models.guns.Gun;
 
 public class Terrorist extends PlayerImpl {
 

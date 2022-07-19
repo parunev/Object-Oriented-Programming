@@ -1,4 +1,4 @@
-package CounterStriker.models.guns;
+package ExamPreparation.CounterStriker.models.guns;
 
 public class Rifle extends GunImpl {
 
