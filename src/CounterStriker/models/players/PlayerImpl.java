@@ -1,11 +1,12 @@
-package CounterStriker.src.CounterStriker.models.players;
+package CounterStriker.models.players;
 
-import CounterStriker.src.CounterStriker.common.DataValidator;
-import CounterStriker.src.CounterStriker.models.guns.Gun;
+import CounterStriker.common.DataValidator;
+import CounterStriker.models.guns.Gun;
 
-import static CounterStriker.src.CounterStriker.common.ExceptionMessages.*;
+import static CounterStriker.common.ExceptionMessages.*;
+import static CounterStriker.common.OutputMessages.*;
 
-public class PlayerImpl implements Player{
+public abstract class PlayerImpl implements Player {
 
     private String username;
     private int health;
@@ -22,14 +23,9 @@ public class PlayerImpl implements Player{
         this.setGun(gun);
     }
 
-    private void setGun(Gun gun) {
-        DataValidator.validateGun(gun, INVALID_GUN);
-        this.gun = gun;
-    }
-
-    private void setArmor(int armor) {
-        DataValidator.validateInt(armor, INVALID_PLAYER_ARMOR);
-        this.armor = armor;
+    private void setUsername(String username) {
+        DataValidator.validateString(username, INVALID_PLAYER_NAME);
+        this.username = username;
     }
 
     private void setHealth(int health) {
@@ -37,9 +33,14 @@ public class PlayerImpl implements Player{
         this.health = health;
     }
 
-    private void setUsername(String username) {
-        DataValidator.validateString(username,INVALID_PLAYER_NAME);
-        this.username = username;
+    private void setArmor(int armor) {
+        DataValidator.validateInt(armor, INVALID_PLAYER_ARMOR);
+        this.armor = armor;
+    }
+
+    private void setGun(Gun gun) {
+        DataValidator.validateGun(gun, INVALID_GUN);
+        this.gun = gun;
     }
 
     @Override
@@ -83,5 +84,20 @@ public class PlayerImpl implements Player{
         if (this.health < ZERO_HEALTH) {
             this.health = ZERO_HEALTH;
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder info = new StringBuilder();
+
+        info.append(String.format(PLAYER_TO_STRING, this.getClass().getSimpleName(), this.username))
+                .append(System.lineSeparator());
+        info.append(String.format(PLAYER_HEALTH_TO_STRING, this.health))
+                .append(System.lineSeparator());
+        info.append(String.format(PLAYER_ARMOR_TO_STRING, this.armor))
+                .append(System.lineSeparator());
+        info.append(String.format(PLAYER_GUN_TO_STRING, this.gun.getName()));
+
+        return info.toString().trim();
     }
 }

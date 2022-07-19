@@ -1,11 +1,10 @@
-package CounterStriker.src.CounterStriker.models.guns;
+package CounterStriker.models.guns;
 
-import CounterStriker.src.CounterStriker.common.DataValidator;
+import CounterStriker.common.DataValidator;
 
-import static CounterStriker.src.CounterStriker.common.ExceptionMessages.INVALID_GUN_BULLETS_COUNT;
-import static CounterStriker.src.CounterStriker.common.ExceptionMessages.INVALID_GUN_NAME;
+import static CounterStriker.common.ExceptionMessages.*;
 
-public class GunImpl implements Gun{
+public abstract class GunImpl implements Gun {
 
     private String name;
     private int bulletsCount;
@@ -18,16 +17,15 @@ public class GunImpl implements Gun{
         this.setBulletsCount(bulletsCount);
     }
 
-    private void setBulletsCount(int bulletsCount) {
-        DataValidator.validateInt(bulletsCount, INVALID_GUN_BULLETS_COUNT);
-        this.bulletsCount = bulletsCount;
-    }
-
     private void setName(String name) {
         DataValidator.validateString(name, INVALID_GUN_NAME);
         this.name = name;
     }
 
+    protected void setBulletsCount(int bulletsCount) {
+        DataValidator.validateInt(bulletsCount, INVALID_GUN_BULLETS_COUNT);
+        this.bulletsCount = bulletsCount;
+    }
 
     @Override
     public String getName() {
@@ -45,6 +43,7 @@ public class GunImpl implements Gun{
             this.bulletsCount -= BULLETS_PER_FIRE;
             return BULLETS_PER_FIRE;
         }
+
         return NO_BULLETS;
     }
 }

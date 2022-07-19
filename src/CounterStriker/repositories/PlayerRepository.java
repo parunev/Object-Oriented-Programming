@@ -1,23 +1,22 @@
-package CounterStriker.src.CounterStriker.repositories;
+package CounterStriker.repositories;
 
-import CounterStriker.src.CounterStriker.common.DataValidator;
-import CounterStriker.src.CounterStriker.models.players.Player;
+import CounterStriker.common.DataValidator;
+import CounterStriker.models.players.Player;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static CounterStriker.src.CounterStriker.common.ExceptionMessages.INVALID_PLAYER_REPOSITORY;
+import static CounterStriker.common.ExceptionMessages.INVALID_PLAYER_REPOSITORY;
 
-public class PlayerRepository implements Repository<Player>{
+public class PlayerRepository implements Repository<Player> {
 
     private Map<String, Player> players;
 
-    public PlayerRepository(){
+    public PlayerRepository() {
         this.players = new LinkedHashMap<>();
     }
-
 
     @Override
     public Collection<Player> getModels() {

@@ -1,9 +1,10 @@
-package CounterStriker.src.CounterStriker.common;
+package CounterStriker.common;
 
-import CounterStriker.src.CounterStriker.models.guns.Gun;
-import CounterStriker.src.CounterStriker.models.players.Player;
+import CounterStriker.models.guns.Gun;
+import CounterStriker.models.players.Player;
 
 public class DataValidator {
+
     private static final int INVALID_NUMBER = 0;
 
     public static void validateString(String dataToValidate, String exceptionMessage) {
