@@ -1,0 +1,24 @@
+package christmasRaces.entities.cars;
+
+import christmasRaces.common.DataValidator;
+
+import static christmasRaces.common.ExceptionMessages.INVALID_HORSE_POWER;
+
+public class MuscleCar extends BaseCar{
+
+    public final static int MINIMUM_HORSEPOWER = 400;
+    public final static int MAXIMUM_HORSEPOWER = 600;
+
+    private static final double CUBIC_CENTIMETERS = 5000;
+
+    public MuscleCar(String model, int horsePower) {
+        super(model, horsePower, CUBIC_CENTIMETERS);
+    }
+
+    @Override
+    protected void setHorsePower(int horsePower) {
+        String exceptionMessage = String.format(INVALID_HORSE_POWER, horsePower);
+        DataValidator.validateHorsepower(horsePower, MINIMUM_HORSEPOWER, MAXIMUM_HORSEPOWER, exceptionMessage);
+        super.setHorsePower(horsePower);
+    }
+}
